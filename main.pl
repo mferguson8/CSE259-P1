@@ -63,6 +63,15 @@ drawA(TextWidth, TextHeight, FontSize, CurrentLine, ColumnNumber) :-
 /*-------------------------------------------------------------------------------------------------*/
 
 
+/*-------------------------------------------------------------------------------------------------*/
+/* WRITE RULES FOR drawS HERE*/
+/*-------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------*/
+/* WRITE RULES FOR drawU HERE*/
+/*-------------------------------------------------------------------------------------------------*/
+
+
 
 /* draw the text with appropriate spacing*/
 draw(LeftRightMargin, SpaceBetweenCharacters, FontSize, CurrentLine, TextWidth, TextHeight) :-
@@ -73,11 +82,11 @@ draw(LeftRightMargin, SpaceBetweenCharacters, FontSize, CurrentLine, TextWidth, 
   write('|'), drawSymbol(' ', LeftRightMargin),
   drawA(TextWidth, TextHeight, FontSize, CurrentLine, ColumnNumber),
   /*---------------------------------------------*/
-  /** WRITE YOUR CODES HERE **/
+  /** CALL YOUR RULES HERE **/
   % add spaces here between A and S
-  % drawS
+  % call drawS
   % add spaces here between S and U
-  % drawU
+  % call drawU
   /*---------------------------------------------*/
   drawSymbol(' ', LeftRightMargin),
   write('|'),
@@ -113,8 +122,7 @@ asu(LeftRightMargin, BottomTopMargin, SpaceBetweenCharacters, FontSize) :-
   drawVerticalLinesWithSpace('|', BottomTopMargin, Width),
 
   /* the actual text */
-  drawVerticalLinesWithCharacters(LeftRightMargin, BottomTopMargin, SpaceBetweenCharacters, FontSize), 
-  %nl,
+  drawVerticalLinesWithCharacters(LeftRightMargin, BottomTopMargin, SpaceBetweenCharacters, FontSize),
 
   /* the empty space in the bottom */
   drawVerticalLinesWithSpace('|', BottomTopMargin, Width),
